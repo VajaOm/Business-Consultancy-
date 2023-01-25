@@ -1,35 +1,38 @@
-html{
+html {
     font-size: 16px;
 }
 
-body{
+body {
     margin: 0;
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-img{
+
+
+img {
     width: 50%;
     /* height: 5%; */
     padding: 0;
 }
 
-.main-container{
+.main-container {
     background-color: whitesmoke;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: auto;
 }
 
-.container-one{
+.container-one {
     width: 50%;
 }
 
-.container-two{
+.container-two {
     width: 50%;
 }
 
-.list{
+.list {
     list-style-type: none;
     font-size: 1.3rem;
     display: flex;
@@ -39,56 +42,115 @@ img{
     padding: 0;
 }
 
-.item{
+.item {
     padding: 0.3em 0;
     margin: 0.5em;
 }
 
 ul li a {
     text-decoration: none;
-    color: blue;
-    padding: 0.3em; 
+    color: #083c66;
+    padding: 0.3em;
 }
 
-.item:hover{
+.item:hover {
     /* text-decoration: underline; */
     background-color: lightblue;
 }
 
+.cover-img-container{
+    width: 100%;
+    position: relative;
+    /* display: block; */
+}
+
+.text-container{
+position: absolute;
+}
+
+#cover-img{
+    width: 100%;
+    position: absolute;
+}
+
+.quote {
+    font-size: 3rem;
+    margin-left: 1em;
+    margin-top: 3em;
+    margin-bottom: 0;
+    animation-name: quote-text-animation;
+    animation-duration: 5s;
+    animation-delay: 0;
+}
+
+.quote-para {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 2em;
+    animation-name: text-para-animation;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    z-index: 1;
+}
+
+@keyframes quote-text-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes text-para-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 @media (max-width: 768px) {
-    .main-container{
+    .main-container {
         display: inline-block;
         width: 100%;
+        height: auto;
     }
-
-    .container-one{
-        display: inline-block;
-        width: 100%;
-    }
-
-    .container-two{
+    
+    .container-one {
         display: inline-block;
         width: 100%;
     }
     
-    .list{
-        display:inline-block;
+    .container-two {
+        display: inline-block;
         width: 100%;
-        font-size: 0.7rem;
     }
-
-    img{
-        width: 60%;
+    
+    .list {
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        /* padding: 1.5em; */
     }
-
-    .toggle-btn .bar{
+    
+    img {
+        width: 70%;
+    }
+    
+    .toggle-btn .bar {
         height: .3rem;
         width: 100%;
-        background-color: blue;
+        background-color: #083c66;
         border-radius: 10px;
     }
     
-    .toggle-btn{
+    .toggle-btn {
         position: absolute;
         top: .65rem;
         right: 1rem;
@@ -99,26 +161,45 @@ ul li a {
         height: 1.5rem;
     }
 
-    .container-two{
+    .container-two {
         display: none;
     }
 
 }
 
-@media (min-width:480px)
-{
-    .toggle-btn{
-        top:1.4rem;
-    }
-}
-
-@media (max-width : 480px){
-
-    .toggle-btn{
-        top: 0.5rem;
-        display: flex;
+@media (min-width:480px) {
+    .toggle-btn {
+        top: 1.4rem;
     }
     
+}
+
+@media (max-width : 480px) {
+
+    .toggle-btn {
+        top: 0.5rem;
+    }
+
+    .cover-img-container{
+        align-items: center;
+    }
+    
+    .text-container{
+        top: 10em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    .quote{
+        font-size: 1rem;
+    }
+    
+    .quote-para{
+        font-size: .5rem;
+    }
 
 }
 
