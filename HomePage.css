@@ -7,10 +7,11 @@ body {
 
 :root{
     --fs-xl: clamp(1.2rem,3.5vw + 0rem,3.5rem);
-    --fs-quotePara: clamp(0.3rem,2.5vw + 0rem,1.5rem);
+    --fs-quotePara: clamp(0.5rem,2.4vw + 0rem,1.5rem);
     --fs-navbar : clamp(0.5rem ,3vw + 0rem,1.3rem);
     --mg-quotePara : calc(8px + 2.8vw);
     --mg-quote : calc(8px + 2.8vw);
+    --top : clamp(25em,100vw + 0em,55em);
 }
 
 
@@ -63,8 +64,13 @@ ul li a {
     background-color: lightblue;
 }
 
+.main-content-container >*:not(#cover-img){
+    position: absolute;
+}
+
 .second-container{
     position: relative;
+    width: 100%;
 }
 
 .second-container-one{
@@ -79,7 +85,7 @@ ul li a {
 .quote {
     font-size: var(--fs-xl);
     margin-left: calc(8px + 2.8vw);;
-    margin-top: 3em;
+    margin-top: 2.5em;
     z-index: 1;
     margin-bottom: 0;
     animation-name: quote-text-animation;
@@ -118,21 +124,68 @@ ul li a {
     }
 }
 
-.wavy-container{
-    max-width: 100%;
-    position: absolute;
-    /* border: 1px solid black; */
-    top: 51.4em;
+.content-container{
+    z-index: 1;
 }
 
-#wavy-img{
-    z-index: 1;
+#cover-img{
+    z-index: -1;
+}
+
+.content-container{
+    top: var(--top-content);
+    position: absolute;
+}
+
+.third-container-heading{
+    animation-name: third-container-heading;
+    animation-duration: 3s;
+}
+
+@keyframes third-container-heading {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.third-container{
+    position: absolute;
+    top: var(--top);
+    padding: 1em;
+
+}
+
+.Sec-gen-content,.First-gen-content{
+    text-align: justify;
+}
+
+.third-container-one{
+    display: flex;
+    flex-direction: column;
+}
+
+.First-gen{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Sec-gen{
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
+.second-gen-heading,.Sec-gen-content{
+    margin-left: 50%;
+}
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .first-container {
         display: inline-block;
         width: 100%;
@@ -182,32 +235,38 @@ ul li a {
     .first-container-two {
         display: none;
     }
-    .cover-img-container{
-        /* align-items: center; */
-        position: static;
-    }
-    
-    
 
-}
-
-@media (min-width:480px) {
-    .toggle-btn {
-        top: 1.4rem;
+    #cover-img{
+        position: relative;
     }
-    
-    .text-container{
-        top: 22.5em;
-        width: 100%;
+
+    .second-container-one{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        text-align: center;
     }
+    
+    .quote{
+        margin-top: 0;
+    }
+
+    .third-container{
+        position: relative;
+    }
+
+
+}
+
+@media (min-width:480px) and (max-width:1024px){
+    .toggle-btn {
+        top: 1.4rem;
+    }
+
 }
 
 @media (max-width : 480px) {
-
+    
     .toggle-btn {
         top: 0.5rem;
     }
