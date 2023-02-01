@@ -407,6 +407,9 @@ ul li a {
     .Sec-gen-content {
         margin-left: 0%;
     }
+    
+    .footer-container-one{
+         row-gap: 1em;
 }
 
 @media (min-width:480px) and (max-width:680px) {
