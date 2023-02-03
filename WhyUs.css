@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 
 html {
     box-sizing: border-box;
-
 }
 
 :root {
@@ -130,15 +130,18 @@ ul li a {
 
 .heading-Footer {
     font-size: var(--ft-heading);
+    font-weight: bold;
 }
 
 .content-Footer {
     font-size: var(--ft-content);
+    font-weight: bold;
 }
 
 .copyright-Footer {
     font-size: calc(var(--ft-content)-0.2rem);
     margin-top: 0;
+    font-weight: bold;
 }
 
 .footer-container-one {
@@ -148,7 +151,6 @@ ul li a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
 .socials {
@@ -174,6 +176,7 @@ ul li a {
 .heading {
     color: #083c66;
     font-size: var(--fs-head);
+    font-weight: bold;
 }
 
 .links {
