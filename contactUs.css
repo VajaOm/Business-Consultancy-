@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+img {
+    width: 35vw;
+}
+
+:root {
+    --fs-navbar: clamp(0.5rem, 3vw + 0rem, 1.3rem);
+    --fs-head: clamp(1.5rem, 5vw + 0rem, 2.5rem);
+    --ft-content: clamp(0.6rem, 4vw + 0rem, 1.1rem);
+    --ft-heading: clamp(1.2rem, 4vw + 0rem, 1.9rem);
+    --fs-label: clamp(0.6rem, 4vw, 1.2rem);
+}
+
+
+.first-container {
+    background-attachment: fixed;
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.first-container-one {
+    width: 50%;
+}
+
+.first-first-container-two {
+    width: 50%;
+}
+
+.list {
+    list-style-type: none;
+    font-size: var(--fs-navbar);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.item {
+    padding: 0.3em 0;
+    margin: 0.5em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #083c66;
+    padding: 0.3em;
+}
+
+.item:hover {
+    background-color: lightblue;
+}
+
+
+.links {
+    color: gray;
+    text-decoration-color: gray;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: red;
+}
+
+.contact-us-img {
+    width: 100%;
+}
+
+.header-img {
+    width: 100%;
+}
+
+.heading {
+    font-size: var(--fs-head);
+    color: #083c66;
+    margin: 1.5em 2em;
+}
+
+form {
+    display: flex;
+    width: 50%;
+    margin: 0 5em;
+    border: 2px solid brown;
+    border-inline-start: 5px solid;
+    border-block-start: 5px solid;
+    border-image-source: radial-gradient(circle at top left,
+            #083c66, transparent 50%);
+    border-image-slice: 1;
+    padding: 1em;
+}
+
+.form {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    font-size: var(--fs-label);
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 0.5em 3em;
+    background-color: #5bc0de;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 1em;
+    font-size: calc(var(--fs-label)-0.2em);
+}
+
+button:hover {
+    background-color: #0275d8;
+}
+
+
+
+
+
+
+
+
+
+
+.footer-content {
+    width: 100%;
+    animation-name: page;
+    margin-top: 10em;
+    animation-duration: 3s;
+    padding-top: 2em;
+    border-top-right-radius: 3em;
+    border-top-left-radius: 3em;
+    background-color: whitesmoke;
+    color: #083c66;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.heading-Footer {
+    font-size: var(--ft-heading);
+}
+
+.content-Footer {
+    font-size: var(--ft-content);
+}
+
+.copyright-Footer {
+    font-size: calc(var(--ft-content)-0.2rem);
+    margin-top: 0;
+}
+
+.footer-container-one {
+    padding: 0 3em;
+    margin: 0 var(--mg-quotePara);
+    display: flex;
+    row-gap: 1em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.socials {
+    list-style-type: none;
+    display: flex;
+}
+
+.item1,
+.item2,
+.item3,
+.item4 {
+    width: 15%;
+    margin-left: 40%;
+}
+
+.item1:hover,
+.item2:hover,
+.item3:hover,
+.item4:hover {
+    width: 17%;
+}
+
+
+@keyframes page {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .heading {
+        color: #083c66;
+    }
+
+    .footer-container-one {
+        padding: 0 1em;
+    }
+
+    .first-container {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+    img {
+        width: 70vw;
+    }
+
+    .first-container-one {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .first-container-two {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .list {
+        display: inline-block;
+        width: 100%;
+        font-size: var(--fs-navbar);
+        text-align: center;
+        /* padding: 1.5em; */
+    }
+
+
+    .toggle-btn .bar {
+        height: .3rem;
+        width: 100%;
+        background-color: #083c66;
+        border-radius: 10px;
+    }
+
+    .toggle-btn {
+        position: absolute;
+        top: .65rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 1.8rem;
+        height: 1.5rem;
+    }
+
+    .first-container-two {
+        display: none;
+    }
+
+    form {
+        margin: 1em 0.5em;
+        width: 85%;
+        border-inline-start: 5px solid;
+        border-block-start: 5px solid;
+        border-image-source: radial-gradient(circle at top left,
+                #083c66, transparent 40%);
+        border: 2px solid brown;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .input {
+        width: 90%;
+    }
+
+
+}
+
+
+@media (min-width:480px) and (max-width:680px) {
+    .footer-content {
+        margin-top: 10em;
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+        width: 30%;
+    }
+
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
+        width: 33%;
+    }
+}
+
+@media (min-width:681px) and (max-width:768px) {
+    .footer-content {
+        margin-top: 10em;
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+        width: 28%;
+    }
+
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
+        width: 31%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .footer-content {
+        margin-top: 10em;
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+        width: 25%;
+    }
+
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
+        width: 28%;
+    }
+}
+
+
+@media (max-width : 480px) {
+
+    .toggle-btn {
+        top: 0.5rem;
+    }
+
+    .footer-content {
+        margin-top: 5em;
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+        width: 25%;
+    }
+
+    .item1:hover,
+    .item2:hover,
+    .item3:hover,
+    .item4:hover {
+        width: 28%;
+    }
+}
+
+
+@media (min-width:480px) and (max-width:1024px) {
+    .toggle-btn {
+        top: 1.4rem;
+    }
+}
