@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 
@@ -79,6 +80,7 @@ a {
     color: #083c66;
     margin: 2em 1em;
     font-size: var(--fs-head);
+    font-weight: bold;
 }
 
 .about-us-img {
@@ -125,19 +127,23 @@ h4 {
     color: #083c66;
     font-weight: bold;
     text-align: justify;
+    padding: 0 3em;
 }
 
 .heading-Footer {
     font-size: var(--ft-heading);
+    font-weight: bold;
 }
 
 .content-Footer {
     font-size: var(--ft-content);
+    font-weight: 600;
 }
 
 .copyright-Footer {
     font-size: calc(var(--ft-content)-0.2rem);
     margin-top: 0;
+    font-weight: 600;
 }
 
 .footer-container-one {
@@ -243,9 +249,14 @@ h4 {
         display: flex;
         flex-direction: column;
         width: 90%;
-        margin: 1em 0.8em;
+        margin: 1em 0.5em;
         padding: 0.5em;
         text-align: justify;
+        border-inline-start: 5px solid;
+        border-block-start: 5px solid;
+        border-image-source: radial-gradient(circle at top left,
+                #083c66, transparent 20%);
+        border-image-slice: 1;
     }
 
     .heading {
@@ -255,6 +266,10 @@ h4 {
     .content,
     .content2 {
         width: 100%;
+    }
+
+    .footer-content{
+        padding: 0 1em;
     }
 }
 
