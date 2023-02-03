@@ -81,6 +81,8 @@ a {
 }
 
 .contact-us-img {
+    animation-name: page;
+    animation-duration: 2s;
     width: 100%;
 }
 
@@ -95,6 +97,8 @@ a {
 }
 
 form {
+    animation-name: page;
+    animation-duration: 2s;
     display: flex;
     width: 50%;
     margin: 0 5em;
@@ -138,14 +142,6 @@ button:hover {
 }
 
 
-
-
-
-
-
-
-
-
 .footer-content {
     width: 100%;
     animation-name: page;
@@ -156,21 +152,23 @@ button:hover {
     border-top-left-radius: 3em;
     background-color: whitesmoke;
     color: #083c66;
-    font-weight: bold;
     text-align: justify;
 }
 
 .heading-Footer {
     font-size: var(--ft-heading);
+    font-weight: bold;
 }
 
 .content-Footer {
     font-size: var(--ft-content);
+    font-weight: 600;
 }
 
 .copyright-Footer {
     font-size: calc(var(--ft-content)-0.2rem);
     margin-top: 0;
+    font-weight: 600;
 }
 
 .footer-container-one {
@@ -221,6 +219,7 @@ button:hover {
 
     .heading {
         color: #083c66;
+        margin: 2em 1em;
     }
 
     .footer-container-one {
@@ -285,7 +284,6 @@ button:hover {
         border-block-start: 5px solid;
         border-image-source: radial-gradient(circle at top left,
                 #083c66, transparent 40%);
-        border: 2px solid brown;
         display: flex;
         flex-direction: column;
     }
